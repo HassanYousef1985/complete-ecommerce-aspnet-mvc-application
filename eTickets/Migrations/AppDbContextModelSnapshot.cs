@@ -156,7 +156,7 @@ namespace eTickets.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Prducers");
+                    b.ToTable("Producers");
                 });
 
             modelBuilder.Entity("eTickets.Models.Actor_Movie", b =>
