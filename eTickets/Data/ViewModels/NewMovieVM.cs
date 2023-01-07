@@ -1,6 +1,5 @@
 ﻿using eTickets.Data;
 using eTickets.Data.Base;
-using eTickets.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -14,11 +13,11 @@ namespace eTickets.Models
     {
         [Display(Name = "Movie name")]
         [Required(ErrorMessage = "Name is required")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Display(Name = "Movie description")]
         [Required(ErrorMessage = "Description is required")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [Display(Name = "Price in $")]
         [Required(ErrorMessage = "Price is required")]
@@ -26,7 +25,7 @@ namespace eTickets.Models
 
         [Display(Name = "Movie poster URL")]
         [Required(ErrorMessage = "Movie poster URL is required")]
-        public string ImageURL { get; set; }
+        public string? ImageURL { get; set; }
 
         [Display(Name = "Movie start date")]
         [Required(ErrorMessage = "Start date is required")]
@@ -43,7 +42,7 @@ namespace eTickets.Models
         //Relationships
         [Display(Name = "Select actor(s)")]
         [Required(ErrorMessage = "Movie actor(s) is required")]
-        public List<int> ActorIds { get; set; }
+        public List<int>? ActorIds { get; set; }
 
         [Display(Name = "Select a cinema")]
         [Required(ErrorMessage = "Movie cinema is required")]
